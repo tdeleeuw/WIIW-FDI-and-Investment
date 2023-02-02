@@ -1,5 +1,7 @@
+// change the working directory below to the folder containing the the data (excel file) //
 cd "C:\Users\Startklaar\Desktop\Studies\MSc - Economic Development & Globalisation\RA\WiP"
 
+// excel file download can be found in the README of the repository //
 import excel "(wiiw) FDI by activities - complete database.xlsx", sheet("Worksheet") cellrange(A6:AM9345) firstrow case(preserve)
 
 drop Footnotes Sources
