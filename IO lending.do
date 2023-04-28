@@ -3,6 +3,7 @@ cd "C:\Users\Startklaar\Desktop\Studies\MSc - Economic Development & Globalisati
 // BULGARIA //
 import excel "BGR_NIOT_nov16", sheet(National IO-tables) firstrow case(preserve)
 
+**Selecting the right sector-pairs
 drop in 1
 drop K* T U CONS* GFCF INVEN EXP GO Description
 destring A* B C* D35 E* F G* H* I J* L68 M* N O84 P85 Q R_S, replace
@@ -10,6 +11,7 @@ keep if Origin == "Domestic"
 keep if Code == "K64"
 drop Code Origin
 
+**Matching the IO sectors to the ones in the FDI and GFCF measures
 egen IND1 = rowtotal(A*), missing
 drop A*
 label variable IND1 "Industry A"
@@ -568,6 +570,8 @@ save lend_SI, replace
 clear
 
 // ALBANIA, BOSNIA & HERZEGOVINA, NORTH MACEDONIA --> average of sample //
+**No WIOD data available for these three countries, instead assign an average of the other countries in the sample
+
 use lend_BG.dta
 merge 1:1 industry Year using lend_CZ, nogenerate
 merge 1:1 industry Year using lend_EE, nogenerate
