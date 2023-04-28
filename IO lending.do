@@ -621,4 +621,9 @@ encode industry, gen(sector)
 order CountryCode country sector year lendcoeff_IO
 sort country year sector
 
+egen sumio = total(lendcoeff_IO), by(country year)
+gen lendcoeff_IOb = lendcoeff_IO/sumio
+drop lendcoeff_IO sumio
+ren lendcoeff_IOb lendcoeff_IO
+
 save lendcoeff3.dta, replace
