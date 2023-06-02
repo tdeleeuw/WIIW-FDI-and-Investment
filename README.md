@@ -19,7 +19,7 @@ IMPORTANT BEFORE USE
   - Hungary: https://www.mnb.hu/en/statistics/statistical-data-and-information/statistical-time-series/x-monetary-and-other-balance-sheet-statistics
   - Slovakia: https://nbs.sk/en/statistics/financial-institutions/banks/statistical-data-of-monetary-financial-institutions/loans/
 
-2. IMPORT EXCEL COMMNANDS
+2. IMPORT EXCEL COMMANDS
 - Place the original excel files in the initial working directory for it to work, not in a path.
 - Be aware that datasources might have been updated since writing this code, therefore the "sheet" and "cellrange" options may have to be adjusted.
 
