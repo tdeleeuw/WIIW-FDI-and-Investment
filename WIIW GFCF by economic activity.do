@@ -51,7 +51,7 @@ drop Unit
 order CountryCode country classification industry year GFCF
 
 // Temporary save including both NACE revisions //
-save gfcf_bothrevs, replace
+save "$path\gfcf_bothrevs", replace
 
 
 
@@ -95,12 +95,12 @@ order CountryCode country sector year GFCF
 sort country year sector
 rename GFCF GFCFR2
 
-save gfcf_rev2, replace
+save "$path\gfcf_rev2", replace
 clear
 
 
 // Performing similar transformations for first revision //
-use gfcf_bothrevs.dta
+use "$path\gfcf_bothrevs.dta"
 
 keep if classification == 1
 
@@ -140,16 +140,16 @@ order CountryCode country sector year GFCF
 sort country year sector
 rename GFCF GFCFR1
 
-save gfcf_rev1, replace
+save "$path\gfcf_rev1.dta", replace
 clear
 
 
 // merging the two adjusted revisions into one dataset //
-use gfcf_rev2.dta 
-merge 1:1 country sector year using gfcf_rev1.dta, nogenerate
+use "$path\gfcf_rev2.dta" 
+merge 1:1 country sector year using "$path\gfcf_rev1.dta", nogenerate
 keep if year > 1996 & year < 2021
 
-save gfcf_final.dta, replace
+save "$path\gfcf_final.dta", replace
 
 
 
