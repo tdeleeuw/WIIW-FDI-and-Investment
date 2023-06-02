@@ -3,9 +3,9 @@
 ***           (This is the normalisation variable)            ***
 *****************************************************************
 ******* BEFORE STARTING: *************
-* 1. Set a WORKING DIRECTORY (folder) in line 13.
+* 1. Set a WORKING DIRECTORY (folder) in line 12.
 *    This folder should already exist on your computer.
-*    The global defined in line 13 will ensure the code can access this folder on various code lines.
+*    The global defined in line 12 will ensure the code can access this folder on various code lines.
 *    Type "help global" for details.
 *****************************************************************
 
