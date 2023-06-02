@@ -1,10 +1,11 @@
 *****************************************************************
 ***     STATA code for construction of IO reliance proxy      ***
 ********        Based on Input-Output tables data        ********
+*****************************************************************
 ******* BEFORE STARTING: *************
-* 1. Set a WORKING DIRECTORY (folder) in line 15.
+* 1. Set a WORKING DIRECTORY (folder) in line 16.
 *    This folder should already exist on your computer.
-*    The global defined in line 15 will ensure the code can access this folder on various code lines.
+*    The global defined in line 16 will ensure the code can access this folder on various code lines.
 *    Type "help global" for details.
 * 2. Download the National Input-Output tables for: Bulgaria,
 *	 Czechia, Estonia, Hungary, Lithuania, Latvia, Poland,
