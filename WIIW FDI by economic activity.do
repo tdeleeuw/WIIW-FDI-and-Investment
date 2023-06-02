@@ -11,7 +11,7 @@
 *****************************************************************
 
 global path "working directory"
-cd "$path"
+cd "$path\"
 
 import excel "wiiw FDI by activities file.xlsx", sheet("Worksheet") cellrange(A6:AM9345) firstrow case(preserve)
 * might have to change cellrange if updated
@@ -57,7 +57,7 @@ drop if industry == 42
 destring fdi_inflow, replace
 
 // temporary save //
-save fdi_bothrevs, replace
+save "$path\fdi_bothrevs.dta", replace
 
 
 
@@ -104,14 +104,14 @@ order CountryCode country sector year fdi_inflow
 sort country year sector
 rename fdi_inflow fdi_inflowR2
 
-save fdirev2, replace
+save "$path\fdirev2.dta", replace
 clear
 
 
 
 
 // Performing similar transformations for first revision //
-use fdi_bothrevs.dta
+use "$path\fdi_bothrevs.dta"
 
 keep if classification == 1
 
@@ -152,16 +152,16 @@ sort country sector year
 
 rename fdi_inflow fdi_inflowR1
 
-save fdirev1, replace
+save "$path\fdirev1.dta", replace
 clear
 
 
 
 
 // merging the two adjusted revisions into one dataset //
-use fdirev2.dta 
-merge 1:1 country sector year using fdirev1.dta, nogenerate
-save fdipanelnoconvert.dta, replace
+use "$path\fdirev2.dta"
+merge 1:1 country sector year using "$path\fdirev1.dta", nogenerate
+save "$path\fdipanelnoconvert.dta", replace
 clear
 
 
@@ -197,11 +197,11 @@ replace CountryCode = "PL" if CountryCode == "Polish zloty"
 replace CountryCode = "RU" if CountryCode == "Russian rouble"
 replace CountryCode = "RS" if CountryCode == "Serbian dinar"
 replace CountryCode = "UA" if CountryCode == "Ukraine hryvnia"
-save eurncu_conv.dta, replace
+save "$path\eurncu_conv.dta", replace
 clear
 
-use fdipanelnoconvert.dta
-merge m:1 CountryCode year using eurncu_conv.dta, nogenerate
+use "$path\fdipanelnoconvert.dta"
+merge m:1 CountryCode year using "$path\eurncu_conv.dta", nogenerate
 * assign 1 to xr for euro fixed series countries
 replace xr = 1 if country == 6 | country == 4 | country == 11 | country == 10 | country == 17 | country == 16
 gen fdi_inflowR2c = fdi_inflowR2 * xr
@@ -213,7 +213,7 @@ drop fdi_inflowR1 fdi_inflowR2 xr
 // We have to drop Kosovo as the currency conversion is arduous and little data is available for the country anyway //
 drop if country == 9
 
-save fdipanel.dta, replace
+save "$path\fdipanel.dta", replace
 
 
 
