@@ -1,5 +1,5 @@
 *****************************************************************
-***             Construction of the final dataset             ***
+***     STATA code for construction of the final dataset      ***
 *****************************************************************
 ******* BEFORE STARTING: *************
 * 1. Set a WORKING DIRECTORY (folder) in line 11.
