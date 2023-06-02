@@ -1,7 +1,6 @@
 *****************************************************************
 *** STATA Replication Code for matching NACE Rev. 1 and Rev.2 ***
-***         and convert to local currencies                   ***
-***    (normalisation variable is also in local currency)     ***
+***           (This is the normalisation variable)            ***
 *****************************************************************
 ******* BEFORE STARTING: *************
 * 1. Set a WORKING DIRECTORY (folder) in line 13.
