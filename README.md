@@ -12,12 +12,12 @@ IMPORTANT BEFORE USE
 - GVA: Gross value added by activities: https://data.wiiw.ac.at/annual-database.html#
 - IO: Financial service activities (sector K64) from WIOD's National Input-Output Tables: https://www.rug.nl/ggdc/valuechain/wiod/wiod-2016-release
 - LEND: Stock of loans to non-financial corporations: 
-Albania: https://www.bankofalbania.org/Statistics/Monetary_Financial_and_Banking_statistics/Credits.html
-Bulgaria: https://www.bnb.bg/Statistics/StMonetaryInterestRate/StDepositsAndCredits/StDCCredits/StDCDataSeries/index.htm
-Czechia: https://www.cnb.cz/cnb/STAT.ARADY_PKG.PARAMETRY_SESTAVY?p_sestuid=51031&p_strid=AABBAC&p_lang=EN
-Estonia: https://statistika.eestipank.ee/#/en/p/650/r/1057/906
-Hungary: https://www.mnb.hu/en/statistics/statistical-data-and-information/statistical-time-series/x-monetary-and-other-balance-sheet-statistics
-Slovakia: https://nbs.sk/en/statistics/financial-institutions/banks/statistical-data-of-monetary-financial-institutions/loans/
+  - Albania: https://www.bankofalbania.org/Statistics/Monetary_Financial_and_Banking_statistics/Credits.html
+  - Bulgaria: https://www.bnb.bg/Statistics/StMonetaryInterestRate/StDepositsAndCredits/StDCCredits/StDCDataSeries/index.htm
+  - Czechia: https://www.cnb.cz/cnb/STAT.ARADY_PKG.PARAMETRY_SESTAVY?p_sestuid=51031&p_strid=AABBAC&p_lang=EN
+  - Estonia: https://statistika.eestipank.ee/#/en/p/650/r/1057/906
+  - Hungary: https://www.mnb.hu/en/statistics/statistical-data-and-information/statistical-time-series/x-monetary-and-other-balance-sheet-statistics
+  - Slovakia: https://nbs.sk/en/statistics/financial-institutions/banks/statistical-data-of-monetary-financial-institutions/loans/
 
 2. IMPORT EXCEL COMMNANDS
 - Place the original excel files in the initial working directory for it to work, not in a path.
