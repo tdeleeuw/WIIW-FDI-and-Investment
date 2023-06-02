@@ -13,7 +13,7 @@
 global path "working directory"
 cd "$path"
 
-import excel "(wiiw) FDI by activities file", sheet("Worksheet") cellrange(A6:AM9345) firstrow case(preserve)
+import excel "wiiw FDI by activities file".xlsx, sheet("Worksheet") cellrange(A6:AM9345) firstrow case(preserve)
 * might have to change cellrange if updated
 
 drop Footnotes Sources
